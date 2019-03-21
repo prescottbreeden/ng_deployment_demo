@@ -10,7 +10,7 @@ import { Hero, MapHero } from '../interfaces/hero';
 })
 export class ViewHeroComponent implements OnInit {
   url_id: string;
-  hero: Hero;
+  hero: any;
 
   constructor(
     private capeService: CapeWashingService,
@@ -22,7 +22,7 @@ export class ViewHeroComponent implements OnInit {
     this._route.params.subscribe((params: Params) => {
       this.url_id = params['id'];
       this.capeService.getOne(this.url_id)
-        .subscribe(data => this.hero = MapHero(data));
+        .subscribe(data => this.hero = data);
     });
   }
 

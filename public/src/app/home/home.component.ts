@@ -8,7 +8,7 @@ import { Hero } from '../interfaces/hero';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  heroes: Hero[] = [];
+  heroes: any = [];
 
   constructor(private capeService: CapeWashingService) { }
 
